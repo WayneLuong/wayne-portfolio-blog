@@ -1,0 +1,116 @@
+body {
+    font-family: $font-primary;
+}
+
+//Animations
+.page-enter{
+    &:after{
+        content: '';
+        background: url('../../img//static.gif') no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        z-index: 98;
+    }
+}
+.page-exit{
+  z-index: 99;
+}
+.fadeIn {
+    opacity: 1 !important;
+    @include transition(1s ease-in-out);
+}
+.typed-fade-out{
+  opacity: 0 !important;
+  @include transition(1s ease-out);
+}
+.menu-active{
+  //height:100%;
+  @include transform(translateX(0px));
+}
+
+@keyframes flicker {
+    from{
+      text-shadow: none;
+    }
+    to{
+      text-shadow: 0 0 10px #fff,0 0 10px #ff4da6,  0 0 20px #e60073, 0 0 20px #e60073, 0 0 25px #e60073, 0 0 30px #e60073, 0 0 40px #e60073;
+    }
+  }
+  @keyframes glowing {
+    from{
+      text-shadow: 0 0 10px #fff,0 0 10px #ff4da6,  0 0 20px #e60073, 0 0 20px #e60073, 0 0 25px #e60073, 0 0 30px #e60073, 0 0 40px #e60073;
+    }
+    to{
+      text-shadow: 0 0 15px #fff, 0 0 20px #fff, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073, 0 0 80px #e60073;
+    }
+  }
+
+@keyframes blinkingText{
+    0%{     color:inherit;    }
+    49%{    color: inherit; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: inherit;    }
+}
+@keyframes bounce{
+    0% {transform: translate(50%, -50%);}
+    100% {transform: translate(50%, -80%);}
+}
+.blinking{
+    animation:blinkingText 1.2s infinite;
+}
+.bounce { 
+    animation: bounce .5s infinite;
+  }
+
+  @keyframes move {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 80%;
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes noise-anim {
+    $steps: 20;
+    @for $i from 0 through $steps {
+      #{percentage($i*(1/$steps))} {
+        $top: random(100);
+        $bottom: random(101 - $top);
+        clip-path: inset(#{$top}% 0 #{$bottom}%  0);
+      }
+    }
+  }
+  @keyframes noise-anim-2 {
+    $steps: 20;
+    @for $i from 0 through $steps {
+      #{percentage($i*(1/$steps))} {
+        $top: random(100);
+        $bottom: random(101 - $top);
+        clip-path: inset(#{$top}% 0 #{$bottom}%  0);
+      }
+    }
+  }
+  .noSelect {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.none{
+  display: none;
+}

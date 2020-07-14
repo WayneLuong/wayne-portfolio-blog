@@ -1,0 +1,58 @@
+{
+    "name": "reactwordpress",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@devloco/react-scripts-wptheme": "3.4.1-wp.1",
+        "@steveeeie/react-page-transition": "^1.1.2",
+        "@testing-library/jest-dom": "^4.2.4",
+        "@testing-library/react": "^9.5.0",
+        "@testing-library/user-event": "^7.2.1",
+        "axios": "^0.19.2",
+        "moment": "^2.26.0",
+        "moment-timezone": "^0.5.31",
+        "node-sass": "^4.14.1",
+        "particles.js": "^2.0.0",
+        "react": "^16.13.1",
+        "react-app-polyfill": "^1.0.6",
+        "react-dom": "^16.13.1",
+        "react-moment": "^0.9.7",
+        "react-redux": "^7.2.0",
+        "react-reveal": "^1.2.2",
+        "react-router-dom": "^5.2.0",
+        "react-slick": "^0.26.1",
+        "react-transition-group": "^4.4.1",
+        "react-typed": "^1.2.0",
+        "redux": "^4.0.5",
+        "redux-thunk": "^2.3.0",
+        "slick-carousel": "^1.8.1",
+        "styled-components": "^5.1.1"
+    },
+    "scripts": {
+        "crabuild": "react-scripts build",
+        "craeject": "react-scripts eject",
+        "crastart": "react-scripts start",
+        "cratest": "react-scripts test",
+        "build": "wptheme-scripts build",
+        "start": "wptheme-scripts start",
+        "wpbuild": "wptheme-scripts wpbuild",
+        "wpstart": "wptheme-scripts wpstart"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "homepage": "/wp_dev/wp-content/themes/protfolio",
+    "browserLaunchTo": "https://localhost/wp_dev"
+}

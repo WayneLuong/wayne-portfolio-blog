@@ -1,0 +1,17 @@
+html, body {
+    padding: 0;
+    margin:0;
+  }
+  .App {
+    position: relative;
+  }
+  
+  .abs-center {
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    left: 50%;                   /* Move 50% from left */
+    bottom: 50%;                /* Move 10px from bottom */
+    @include transform(translate(-50%, 50%));
+  }
+  

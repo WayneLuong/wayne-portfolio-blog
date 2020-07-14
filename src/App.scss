@@ -1,0 +1,30 @@
+//Wordpress blog styles
+@import './assets/scss/includes/wordpressBlogStyles.scss';
+
+//Includes
+@import './assets/scss/includes/reset.scss';
+@import './assets/scss/includes/fonts.scss';
+@import './assets/scss/includes/variables.scss';
+@import './assets/scss/includes/mixins.scss';
+@import './assets/scss/includes/helpers.scss';
+@import './assets/scss/includes/general.scss';
+
+//Components
+@import './assets/scss/App.scss';
+@import './assets/scss/Sidebar.scss';
+@import './assets/scss/Controller.scss';
+@import './assets/scss/Header.scss';
+@import './assets/scss/Home.scss';
+@import './assets/scss/About.scss';
+@import './assets/scss/Blogs.scss';
+@import './assets/scss/Works.scss';
+@import './assets/scss/Contact.scss';
+@import './assets/scss/NotFound.scss';
+@import './assets/scss/blogArticle.scss';
+@import './assets/scss/Cartridge.scss';
+@import './assets/scss/projectContainer.scss';
+
+
+
+
+

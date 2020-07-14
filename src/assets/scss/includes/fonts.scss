@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('../../fonts/Raleway-Regular.ttf') format("truetype");
+    font-style: normal;
+  } 
+  @font-face {
+    font-family: 'Raleway-Bold';
+    src: url('../../fonts/Raleway-Bold.ttf') format("truetype");
+    font-style: normal;
+  } 
+
+  @font-face {
+    font-family: 'Arcade-Regular';
+    src: url('../../fonts/arcade.ttf') format("truetype");
+    font-style: normal;
+  } 
+  @font-face {
+    font-family: 'Arcade-Classic';
+    src: url('../../fonts/arcade-classic.ttf') format("truetype");
+    font-style: normal;
+  } 
+  
+/*   @font-face {
+    font-family: 'CircularStd-Bold';
+    src: url('{{ "photowallsans-bold.eot" | asset_url }}');
+    src: url('{{ "photowallsans-bold.eot" | asset_url }}#iefix') format("embedded-opentype"),
+         url('{{ "photowallsans-bold.woff" | asset_url }}') format("woff"),
+         url('{{ "photowallsans-bold.svg" | asset_url }}#shop-icons') format("svg"),
+         url('{{ "CircularStd-Bold.ttf" | asset_url }}') format("truetype");
+    font-style: normal;
+  }  */

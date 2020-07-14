@@ -1,0 +1,128 @@
+#home {
+    cursor: default;
+    .header {
+        font-size: 5em;
+        margin-bottom:10px;
+        white-space: nowrap;
+        height: 78px;
+        font-family: $font-primary-bold;
+        @media (max-width:500px) {
+            font-size:4em;
+            margin-bottom: -30px;
+        }
+        @media (max-width:330px) {
+            font-size:3.5em;
+        }
+        span {
+            color:#CD4368;
+        }
+    }
+    .ghost-wrap{
+        display: inline;
+        img{
+            width: 18px;
+            margin: 7px 4px;
+            @include tablet {
+                width: 15px;
+            }
+        }
+    }
+    .pacman-wrap{
+        display: inline;
+        margin: 0 -5px;
+        img{
+            height: 67px;
+            @include transform(rotate(180deg));
+            @media (max-width:500px) {
+                height: 46px;
+            }
+            @media (max-width:330px) {
+                height: 37px;
+            }
+        }
+    }
+    .sub-header {
+        font-size: 2em;
+        margin: 20px 0 0px;
+        font-family: $font-primary-bold;
+        @include tablet {
+            font-size:2em;
+        }
+        span {
+            color: #036FB2;
+            font-size:1.1em;
+        }
+    }
+    .slogan {
+        font-size: 1.7em;
+        font-weight: 800;
+        font-family: $font-primary-bold;
+        .divider {
+            padding:0 6px 10px;
+        }
+    }
+}
+#particles-js{
+    background: rgb(1,8,9);
+    color:#fff;
+    background: linear-gradient(146deg, rgba(1,8,9,1) 43%, rgba(9,9,121,1) 89%, rgba(47,16,93,1) 99%);
+    background-image: url('../img/star.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 125%;
+    height: 127%;
+    @include transition(2s ease-in-out);
+    position: absolute;
+  
+    @include tablet {
+        width: 160%;
+        height: 150%;
+    }
+  }
+  .wrapper {
+    min-height: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+
+  ///Laser
+
+.laser-beam {
+    position: absolute;
+    left: -30vw;
+    bottom: -50vh;
+    width: 3px;
+    height: 100px;
+    background: rgba(99,195,231,0.6);
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(99,195,231,1);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(99,195,231,1);
+    box-shadow: 0px 0px 15px 0px rgba(99,195,231,1);
+    animation: laser .5s infinite;
+    @include mobile{
+        left: -0vw;
+    }
+    &.red {
+      left: 70vw;
+      bottom: -50vh;
+      animation: laser2 .5s infinite;
+      background: rgba(236,19,65,0.6);
+      -webkit-box-shadow: 0px 0px 15px 0px rgba(236,19,65,1);
+      -moz-box-shadow: 0px 0px 15px 0px rgba(236,19,65,1);
+      box-shadow: 0px 0px 15px 0px rgba(236,19,65,1);
+      @include mobile{
+        left: 90vw;
+      }
+    }
+  }
+  
+  @keyframes laser {
+    0%  {    @include transform( rotate(35deg) translate(0px, -68px));}
+    100% {    @include transform( rotate(35deg) translate(0px, -1500px)); }
+  }
+
+  @keyframes laser2 {
+    0%  {    @include transform( rotate(-35deg) translate(0px, -47px));}
+    100% {    @include transform( rotate(-35deg) translate(0px, -1501px)); }
+  }

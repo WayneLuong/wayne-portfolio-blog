@@ -1,0 +1,131 @@
+#blogArticle{
+    background-color: #000;
+    color:#000;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    .blog-container{
+        position: relative;
+        background-color: white;
+        height: 75%;
+        width: 90%;
+        border-radius: 50px;
+        overflow: hidden;
+        letter-spacing: 1px;
+        line-height: 23px;
+        font-weight: 300;
+        overflow: hidden;
+        .blog-content{
+            width: 100%;
+        }
+        .wrapper{
+            margin: 0% 6%;
+            overflow: scroll;
+            padding:10px;
+            height: 100%;
+            text-shadow: 0 0 1px #333;
+            @include above-mobile{
+                line-height: 27px;
+            }
+            @include mobile{
+                font-size: 14px;
+            }
+            time{
+                color: gray;
+                font-size: 0.9em;
+            }
+            h1{
+                color:black;
+                font-size: 40px;
+                text-shadow: 0 0 1px #333;
+                margin: 20px 0;
+                line-height: 36px;
+                @include mobile {
+                    font-size: 35px;
+                }
+            }
+            h2,h3,h4,h5,h6{
+                padding:20px 0;
+                font-size:1.5em
+            }
+            h2{
+                font-size:1.5em
+            }
+            h3{
+                font-size:1.4em
+            }
+            h4{
+                font-size:1.3em
+            }
+            h5{
+                font-size:1.2em
+            }
+            .content{
+                padding-bottom: 30px;
+                img{
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        .channel-container{
+            position: absolute;
+            top: 30px;
+            left: 15px;
+            overflow: hidden;
+        }
+        .channel{
+            position: relative;
+            font-size: 60px;
+            z-index: 9;
+            font-family: $font-primary-bold;
+            color:limegreen;
+            background: black;
+            height: 40px;
+            width: fit-content;
+            padding: 10px 3px;
+            overflow: hidden;
+           display: none;
+        }
+    }
+    .close{
+        position: absolute;
+        top: 20px;
+        font-size: 40px;
+        color:#fff;
+        right: 20px;
+        font-family: $font-primary;
+    }
+}
+     .glitch{
+        display: block !important;
+        &::before {
+            content: attr(data-text);
+            position: absolute;
+            left: -2px;
+            text-shadow: 1px 0 blue;
+            top: 0;
+            color: limegreen;
+            background: black;
+            overflow: hidden;
+            animation: noise-anim-2 15s infinite linear alternate-reverse;
+            padding: 10px 3px;
+            height: 40px;
+            width: fit-content;
+          }
+          &::after {
+            content: attr(data-text);
+            position: absolute;
+            left: 2px;
+            text-shadow: -1px 0 red;
+            top: 0;
+            color: limegreen;
+            background: black;
+            height: 40px;
+            width: fit-content;
+            overflow: hidden;
+            animation: noise-anim 2s infinite linear alternate-reverse;
+            padding: 10px 3px;
+          }
+    } 

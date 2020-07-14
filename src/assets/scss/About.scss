@@ -1,0 +1,251 @@
+#about{
+    background: #fff;
+    //Hero
+    .hero{
+        position: relative;
+        background-color: #000;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 25vh;
+        @include tablet {
+            height: 15vh;
+        }
+        .wrapping{
+            z-index: 3;
+        }
+        video{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: 100%;
+            height: auto;
+            @include transform(translate(-50%, -50%));
+            @media (max-width: 1400px){
+                width: auto;
+                height: 100%;
+            }
+        }
+        #overlay {
+        position: absolute; /* Sit on top of the page content */
+        width: 100%; /* Full width (cover the whole page) */
+        height: 100%; /* Full height (cover the whole page) */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+        z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+        cursor: default; /* Add a pointer on hover */
+      }
+    }
+    //About
+    .about{
+        background: #000;
+        height: fit-content;
+        position: relative;
+        @include flexbox;
+        @include justify-content(center);
+        .about-wrapper{ 
+            padding: 10px 0 0;
+            .about-inner-wrapper{
+                padding:15px 0;
+                @include justify-content(space-around);
+            }
+            .img-wrapper{
+                position: relative;
+                .pixelated{
+                    position: absolute;
+                    left:0;
+                    opacity: 1;
+                    image-rendering: pixelated;
+                    animation: fadeIn 5s;
+                    &:hover{
+                        opacity: 0;
+                        @include transition(2s ease-in-out);
+                    }
+                }
+                .noPixelated{
+                    image-rendering: pixelated;
+                }
+                .noPixelated,.pixelated{
+                    width:170px;
+                    @include mobile{
+                        width:120px;
+                    }
+                }
+            }
+        }
+        .wrapper{
+            background:#000;
+            z-index: 90;
+            width:80%;
+            height:fit-content;
+            @include transform(translateY(-100px));
+            padding:5% 10% 0;
+            @media(max-width:1300px){
+                width:90%;
+            }
+            @include tablet {
+                //bottom: 60%;  
+                padding:5% 5% 0;
+                @include transform(translateY(-50px));
+                /* Safari 7.1+ */
+                bottom: 0;  
+            }
+            @include mobile {
+                width: 97%;
+                padding:5% 10px 0;
+            }
+            .name{
+                text-align: center;
+                font-family: $font-primary;
+                text-transform: uppercase;
+                font-size: 40px;
+                letter-spacing: 2px;
+                color:#fff;
+            }
+            .intro{
+                background: white;
+                border: double 5px #000;
+                border-radius: 7px;
+                padding: 25px;
+                min-height: 200px;
+                min-width: 300px;
+                height:fit-content;
+                width: 100%;
+                font-family: $font-primary;
+                font-size: 25px;
+                @include mobile{
+                    font-size: 18px;
+                    padding: 15px;
+                    left: 21px;
+                }
+                @media (max-width:330px){
+                    min-width: 250px;
+                }
+            }
+            .skills{
+                background: #000;
+                border: double 5px #000;
+                border-radius: 7px;
+                padding: 30px 0 0 20px;
+                color:#fff;
+                font-family: $font-primary;
+                @include mobile{
+                    padding: 0px 0 0 20px;
+                }
+                .inner-skills{
+                    @media(max-width: 700px){
+                        @include flex-direction(column);
+                    }
+                }
+                h3{
+                    margin-bottom: 6px;
+                    font-size: 35px;
+                    width: fit-content;
+                    margin-bottom: 10px;
+                    border-bottom: 1px solid $color-primary;
+                    @media(max-width: 500px){
+                        font-size: 25px;
+                    }
+                }
+                li, p{
+                    font-size: 14px;
+                    list-style-type: square;
+                    line-height: 25px;
+                    font-family: $font-primary-tertiary;
+                    @media(max-width: 500px){
+                        font-size: 13px;
+                    }
+                }
+
+                .healthBar{
+                    margin-bottom: 10px;
+                    .text{
+                        padding-right: 5px;
+                        font-size: 23px;
+                        width: 28px;
+                    }
+                    .bar{
+                        height: 19px;
+                        margin-left: 5px;
+                        background: green;
+                        width:80%;
+                        color: #fff;
+                        font-size:18px;
+                        animation: move 2s linear ;
+                    }
+                }
+                .manaBar{
+                    margin-bottom: 30px;
+                    .text{
+                        padding-right: 5px;
+                        font-size: 23px;
+                        width: 28px;
+                    }
+                    .bar{
+                        margin-left: 5px;
+                        height: 19px;
+                        background: blue;
+                        width:80%;
+                        color: #fff;
+                        font-size:18px;
+                        animation: move 3s linear ;
+                    }
+                }
+            }
+        }
+        .typing{
+            height: 60px;
+            span{
+                font-size: 1em;
+                color:#fff;
+                text-shadow: 0 0 3px #fff;
+            }
+            @include mobile {
+                height: 30px;
+            }
+        }
+    }
+    //Services
+    .services{
+        background:#F7F7F7;
+        height: fit-content;
+        position: relative;
+        padding-bottom: 100px;
+        letter-spacing: .7px;
+        img{
+            width: 100px;
+        }
+    }
+    sub{
+        color:$color-primary;
+        font-family: $font-secondary;
+        font-size: .9em;
+        letter-spacing: 1.6px;
+        text-shadow: 0 0 1px #333;
+    }
+    .container{
+        margin: 0 20%;
+        padding:5% 0%;
+        background:#F7F7F7;
+        text-shadow: 0 0 1px #333;
+        @include mobile{
+            margin: 0 5%;
+        }
+        .email{
+            font-weight: bold;
+            text-decoration: underline;
+            padding: 20px 0;
+            color:#000;
+        }
+    }
+    //hero footer
+    .hero-footer{
+        height: 20vh;
+    }
+}

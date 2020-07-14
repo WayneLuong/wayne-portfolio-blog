@@ -1,0 +1,176 @@
+.flex {
+    @include flexbox;
+
+    > * {
+        &.grow {
+            @include flex-grow(1);
+        }
+    }
+
+    &.f-center {
+        @include justify-content(center);
+    }
+
+    &.f-vertical-center {
+        @include align-items(center);
+    }
+    &.flex-1{
+        flex:1;
+    }
+    &.f-inline {
+        @include inline-flex;
+    }
+
+    &.f-space-between {
+        @include justify-content(space-between);
+    }
+    &.f-space-evenly {
+        @include justify-content(space-evenly);
+    }
+
+    &.f-space-end {
+        @include justify-content(flex-end);
+    }
+
+    &.f-dir-column {
+        @include flex-direction(column);
+    }
+
+    &.f-wrap {
+        @include flex-wrap(wrap);
+    }
+
+    &.f-equal-width {
+        > * {
+            @include flex-basis(0);
+            @include flex-grow(1);
+        }
+    }
+
+    &.f-half-width {
+        @include tablet {
+            @include flex-direction(column);
+        }
+        > * {
+            width: 50%;
+            @include tablet {
+                width: 100%;
+            }
+        }
+    }
+
+    &.f-third-width {
+        @include tablet {
+            @include flex-direction(column);
+        }
+        > * {
+            width: 33.33%;
+            @include tablet {
+                width: 100%;
+            }
+        }
+    }
+}
+.flex-1{
+    flex:1;
+}
+.anim {
+    &-hover {
+
+        &-bg {
+            @include transition(color 500ms ease);
+            position: relative;
+            &:before {
+                background: #000;
+                content: '';
+                z-index: $z-minus-one;
+            }
+            &:hover {
+                color: #fff;
+            }
+            &.left-to-right {
+                &:before {
+                    @include position(absolute, left top right, 0px 0px 100%);
+                    @include transition(right 500ms ease);
+                    height: 100%;
+                }
+                &:hover {
+                    &:before {
+                        @include position(absolute, left top right, 0px 0px 0%);
+                    }
+                }
+            }
+            &.top-to-bottom {
+                &:before {
+                    @include position(absolute, left top bottom, 0px 0px 100%);
+                    @include transition(bottom 500ms ease);
+                    width: 100%;
+                }
+                &:hover {
+                    &:before {
+                        @include position(absolute, left top bottom, 0px 0px 0%);
+                    }
+                }
+            }
+            &.right-to-left {
+                &:before {
+                    @include position(absolute, left top right, 100% 0px 0px);
+                    @include transition(left 500ms ease);
+                    height: 100%;
+                }
+                &:hover {
+                    &:before {
+                        @include position(absolute, left top right, 0% 0px 0px);
+                    }
+                }
+            }
+            &.bottom-to-top {
+                &:before {
+                    @include position(absolute, left top bottom, 0px 100% 0px);
+                    @include transition(top 500ms ease);
+                    width: 100%;
+                }
+                &:hover {
+                    &:before {
+                        @include position(absolute, left top bottom, 0px 0% 0px);
+                    }
+                }
+            }
+        }
+
+        &-border {
+            position: relative;
+            &:before {
+                background: #000;
+                content: '';
+                height: 1px;
+            }
+            &.left-to-right {
+                &:before {
+                    @include position(absolute, bottom left right, 0px 0px 100%);
+                    @include transition(right 500ms ease);
+                }
+                &:hover {
+                    &:before {
+                        @include position(absolute, bottom left right, 0px 0px 0%);
+                    }
+                }
+            }
+            &.right-to-left {
+                &:before {
+                    @include position(absolute, bottom left right, 0px 100% 0px);
+                    @include transition(left 500ms ease);
+                }
+                &:hover {
+                    &:before {
+                        @include position(absolute, bottom left right, 0px 0% 0px);
+                    }
+                }
+            }
+        }
+
+    }
+}
+.width-100{
+    width: 100%;
+}

@@ -1,0 +1,165 @@
+#works{
+    background: #fff;
+    position: relative;
+    .active{
+        display: flex !important;
+    }
+    h1{
+        font-size: 3em;
+        font-family: $font-primary-bold;
+        text-align: center;
+        @include mobile{
+            font-size: 2em;
+        }
+    }
+    //Hero
+    .hero{
+        position: relative;
+        background-color: #000;
+        background-image: url('../img/smoke.jpg');
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        min-height: 200px;
+        video{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: 100%;
+            height: auto;
+            @include transform(translate(-50%, -50%));
+            @media (max-width: 1400px){
+                width: auto;
+                height: 100%;
+            }
+        }
+        .wrapping{
+            z-index: 3;
+            position: absolute;
+            left: 50%;                   /* Move 50% from left */
+            bottom: 50%;                /* Move 10px from bottom */
+            @include transform(translate(-50%, 50%));
+            text-align: center;
+            white-space: nowrap;
+            h1{
+                font-size: 3em;
+                font-family: $font-primary-bold;
+                @media (max-width:500px){
+                    font-size: 5em;
+                }
+                @media (max-width:350px){
+                    font-size: 4.5em;
+                }
+            }
+            .btn{
+                text-align: center;
+                border: white solid 2px;
+                padding: 11px 30px;
+                cursor: pointer;
+                text-transform: uppercase;
+                font-size: 20px;
+                font-family: $font-primary;
+                max-width: 200px;
+                opacity: 0.8;
+                margin:5px auto 20px;
+                background-size: 201% 100%;
+                background-image: linear-gradient(to right, transparent 50%, darkgray 50%);
+                @include transition(.5s ease-in-out);
+                color:#fff;
+                &:hover{
+                    background-position:  -99% 0;
+                    color:black;
+                    opacity: 0.4;
+                }
+            }
+            .coin{
+                height: 50px;
+                position: absolute;
+                top: 50%;
+                right: 50%;
+                @include transform(translate(50%, -50%));
+            }
+        }
+        #overlay {
+        position: absolute; /* Sit on top of the page content */
+        width: 100%; /* Full width (cover the whole page) */
+        height: 100%; /* Full height (cover the whole page) */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+        z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+        cursor: default; /* Add a pointer on hover */
+      }
+      .line{
+        height: 2px;
+        background: white;
+        width: 100px;
+        position: absolute;
+        z-index: 2;
+        opacity: 0.5;
+        bottom: 0;
+        right: 50%;
+        @include transform(translate(50%, 50%));
+        margin: 10px 0;
+        cursor: pointer;
+      }
+    }
+    //About
+    .about{
+        background: #fff;
+        height: fit-content;
+        position: relative;
+        padding: 40px 10%;
+        @media (min-width:1600px){
+            padding: 40px 20%;
+        }
+        .wrapper{
+            background:#fff;
+            z-index: 90;
+            width:80%;
+            height: 100%;
+            position: absolute;
+            left: 50%;               
+            bottom: 80%;            
+            @include transform(translate(-50%, 50%));
+            padding:5% 10%;
+            @include tablet {
+                bottom: 60%;          
+            }
+        }
+    }
+    //Services
+    .services{
+        background:#F7F7F7;
+        height: 50vh;
+        position: relative;
+    }
+    sub{
+        color:$color-primary;
+        font-family: $font-primary-bold;
+        font-size: .8em;
+    }
+    .container{
+        margin: 0 20%;
+        padding:5% 0%;
+        background:#F7F7F7;
+    }
+    //hero footer
+    .hero-footer{
+        height: 20vh;
+        .wrapping{
+            bottom: 55%;
+        }
+    }
+    .curious{
+        @include mobile{
+            font-size: 3em !important;
+        }
+    }
+}

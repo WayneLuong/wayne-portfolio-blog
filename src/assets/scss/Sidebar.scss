@@ -1,0 +1,27 @@
+.icons-wrapper{
+    position: fixed;
+    bottom: 50%;   
+    z-index: 999999999;
+    right:0%; 
+    @include transform(translate(90%, 50%));
+    @include transition( .5s ease-out);
+    color: white;
+    @include flexbox;
+    @include flex-direction(column);
+    i{
+      font-size: 1.5em;
+      -webkit-text-stroke: .7px darkgray;
+      text-shadow: 0 0 3px #fff;
+    }
+    a {
+      color: #fff;
+      padding:10px;
+      &:hover{
+        color:$color-primary;
+        @include transition(.5s ease-in-out);
+      }
+    }
+  }
+  .side-bar-active{
+    @include transform(translate(0%, 50%));
+  }
