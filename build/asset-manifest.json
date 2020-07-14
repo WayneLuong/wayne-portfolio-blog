@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/wp-content/themes/build/static/css/main.chunk.css",
+    "main.js": "/wp-content/themes/build/static/js/main.chunk.js",
+    "main.js.map": "/wp-content/themes/build/static/js/main.chunk.js.map",
+    "runtime-main.js": "/wp-content/themes/build/static/js/bundle.js",
+    "runtime-main.js.map": "/wp-content/themes/build/static/js/bundle.js.map",
+    "static/css/2.chunk.css": "/wp-content/themes/build/static/css/2.chunk.css",
+    "static/js/2.chunk.js": "/wp-content/themes/build/static/js/2.chunk.js",
+    "static/js/2.chunk.js.map": "/wp-content/themes/build/static/js/2.chunk.js.map",
+    "index.php": "/wp-content/themes/build/index.php",
+    "precache-manifest.860941a9e85f0557c10c6ce1e55275f9.js": "/wp-content/themes/build/precache-manifest.860941a9e85f0557c10c6ce1e55275f9.js",
+    "service-worker.js": "/wp-content/themes/build/service-worker.js",
+    "static/css/2.chunk.css.map": "/wp-content/themes/build/static/css/2.chunk.css.map",
+    "static/css/main.chunk.css.map": "/wp-content/themes/build/static/css/main.chunk.css.map",
+    "static/js/2.chunk.js.LICENSE.txt": "/wp-content/themes/build/static/js/2.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/wp-content/themes/build/static/media/static.f5a81c7d.gif",
+    "static/media/blueghost.png": "/wp-content/themes/build/static/media/blueghost.6e42e7f5.png",
+    "static/media/ecommerce.png": "/wp-content/themes/build/static/media/ecommerce.70638751.png",
+    "static/media/index.css": "/wp-content/themes/build/static/media/fa-solid-900.b6a14bb8.ttf",
+    "static/media/gear.png": "/wp-content/themes/build/static/media/gear.097159ab.png",
+    "static/media/invaders.gif": "/wp-content/themes/build/static/media/invaders.7790f580.gif",
+    "static/media/laserSound.wav": "/wp-content/themes/build/static/media/laserSound.ee8bf0ee.wav",
+    "static/media/laserSound2.wav": "/wp-content/themes/build/static/media/laserSound2.f15aad9d.wav",
+    "static/media/pika.gif": "/wp-content/themes/build/static/media/pika.e938d18f.gif",
+    "static/media/pixel.png": "/wp-content/themes/build/static/media/pixel.a6c7f530.png",
+    "static/media/shopify.png": "/wp-content/themes/build/static/media/shopify.9bab1b91.png",
+    "static/media/slick-theme.css": "/wp-content/themes/build/static/media/slick.f97e3bbf.svg",
+    "static/media/smoke.mp4": "/wp-content/themes/build/static/media/smoke.24d0d214.mp4",
+    "static/media/smoke2.mp4": "/wp-content/themes/build/static/media/smoke2.0b4313b5.mp4",
+    "static/media/smoke2.png": "/wp-content/themes/build/static/media/smoke2.9ffaf6a6.png",
+    "static/media/unpixel.png": "/wp-content/themes/build/static/media/unpixel.04e13114.png",
+    "static/media/www.png": "/wp-content/themes/build/static/media/www.133ad943.png"
+  },
+  "entrypoints": [
+    "static/js/bundle.js",
+    "static/css/2.chunk.css",
+    "static/js/2.chunk.js",
+    "static/css/main.chunk.css",
+    "static/js/main.chunk.js"
+  ]
+}
